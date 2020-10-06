@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
-#include "Header1.h"
+#include "NewDouble.h"
 
 DoubleNum operator+(DoubleNum a, DoubleNum b) {
 	int exp_2,mant_2;

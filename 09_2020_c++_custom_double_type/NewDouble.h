@@ -5,9 +5,9 @@ using namespace std;
 #include <stdio.h>
 
 class DoubleNum {
-private:
-	int mant, exp, pm;
+protected: int mant,exp, pm;
 public:
+
 	DoubleNum(double NUM) {
 		mant = 0;
 		exp = 0;
@@ -31,14 +31,14 @@ public:
 		}
 	}
 	DoubleNum(int newExp, int newMant) {
-			mant = 0;
-			exp = 0;
-			pm = 0;
-			mant = newMant;
-			exp = newExp;
-			while (abs(mant) < 512) { mant *= 2; exp--; }
-			while (abs(mant) > 1024) { mant /= 2; exp++; }
-		}
+		mant = 0;
+		exp = 0;
+		pm = 0;
+		mant = newMant;
+		exp = newExp;
+		while (abs(mant) < 512) { mant *= 2; exp--; }
+		while (abs(mant) > 1024) { mant /= 2; exp++; }
+	}
 	void print() {
 		printf("%f [%d,%d] ", mant * pow(2.0, double(exp)), mant, exp);
 	}
@@ -49,5 +49,5 @@ public:
 };
 
 
-
+ 
 
